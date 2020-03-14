@@ -15,9 +15,8 @@ export class ProductDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    
-    this.route.paramMap.subscribe(params => {
-    this.product = products[+params.get('productId')];
+    this.route.paramMap.subscribe(paramsto => {
+    this.product = products[+paramsto.get('prodductId')];
   });
   }
 
